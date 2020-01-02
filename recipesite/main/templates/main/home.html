@@ -1,0 +1,16 @@
+{% load static %}
+<!-- Prism CSS -->
+<link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+</head>
+<body>
+
+{% for tut in recipes %}
+    <p>{{tut.recipe_title}}</p>
+    <p>{{tut.recipe_content|safe}}</p>
+    <p>{{tut.recipe_published}}</p>
+    <br><br>
+{% endfor %}
+
+<!-- Prism JS -->
+<script src="{% static "tinymce/js/prism.js" %}"></script>
+</body>
